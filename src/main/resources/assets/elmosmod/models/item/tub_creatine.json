@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated" ,
+  "textures": {
+    "layer0": "elmosmod:item/tub_creatine"
+  }
+}

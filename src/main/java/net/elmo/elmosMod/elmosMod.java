@@ -1,6 +1,10 @@
 package net.elmo.ElmosMod;
 
 import com.mojang.logging.LogUtils;
+import net.elmo.ElmosMod.block.ModBlocks;
+import net.elmo.ElmosMod.item.ModCreativeModeTabs;
+import net.elmo.ElmosMod.item.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.CreativeModeTabEvent;
@@ -25,6 +29,9 @@ public class ElmosMod
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
@@ -42,7 +49,33 @@ public class ElmosMod
 
     private void addCreative(CreativeModeTabEvent.BuildContents event)
     {
+        if (event.getTab()== CreativeModeTabs.INGREDIENTS){
+            event.accept(ModItems.BLAKC_OPAL);
+            event.accept(ModItems.TUB_CREATINE);
+        }
+        if (event.getTab()== CreativeModeTabs.BUILDING_BLOCKS){
+            event.accept(ModBlocks.BLACK_OPAL_BLOCK);
+            event.accept(ModBlocks.BLACK_OPAL_ORE);
+            event.accept(ModBlocks.DEEPSLATE_BLACK_OPAL_BLOCK_ORE);
+            event.accept(ModBlocks.NETHERRACK_BLACK_OPAL_BLOCK_ORE);
+            event.accept(ModBlocks.ENDSTONE_BLACK_OPAL_BLOCK_ORE);
+        }
+        if (event.getTab()== CreativeModeTabs.NATURAL_BLOCKS) {
+            event.accept(ModBlocks.BLACK_OPAL_ORE);
+            event.accept(ModBlocks.DEEPSLATE_BLACK_OPAL_BLOCK_ORE);
+            event.accept(ModBlocks.NETHERRACK_BLACK_OPAL_BLOCK_ORE);
+            event.accept(ModBlocks.ENDSTONE_BLACK_OPAL_BLOCK_ORE);
+        }
+        if (event.getTab()== ModCreativeModeTabs.CLUTCH_TAB){
+            event.accept(ModItems.BLAKC_OPAL);
+            event.accept(ModItems.TUB_CREATINE);
+            event.accept(ModBlocks.BLACK_OPAL_BLOCK);
+            event.accept(ModBlocks.BLACK_OPAL_ORE);
+            event.accept(ModBlocks.DEEPSLATE_BLACK_OPAL_BLOCK_ORE);
+            event.accept(ModBlocks.NETHERRACK_BLACK_OPAL_BLOCK_ORE);
+            event.accept(ModBlocks.ENDSTONE_BLACK_OPAL_BLOCK_ORE);
 
+        }
     }
 
 
