@@ -13,6 +13,8 @@ public class ModItems{
 
     public static final RegistryObject<Item> BLAKC_OPAL = ITEMS.register("black_opal",
             ()-> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RAW_BLAKC_OPAL = ITEMS.register("raw_black_opal",
+            ()-> new Item(new Item.Properties()));
     public static final RegistryObject<Item> TUB_CREATINE = ITEMS.register("tub_creatine",
             ()-> new Item(new Item.Properties()));
 

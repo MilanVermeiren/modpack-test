@@ -68,6 +68,7 @@ public class ElmosMod
         }
         if (event.getTab()== ModCreativeModeTabs.CLUTCH_TAB){
             event.accept(ModItems.BLAKC_OPAL);
+            event.accept(ModItems.RAW_BLAKC_OPAL);
             event.accept(ModItems.TUB_CREATINE);
             event.accept(ModBlocks.BLACK_OPAL_BLOCK);
             event.accept(ModBlocks.BLACK_OPAL_ORE);
