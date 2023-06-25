@@ -65,6 +65,13 @@ public class ElmosMod
             event.accept(ModBlocks.DEEPSLATE_BLACK_OPAL_BLOCK_ORE);
             event.accept(ModBlocks.NETHERRACK_BLACK_OPAL_BLOCK_ORE);
             event.accept(ModBlocks.ENDSTONE_BLACK_OPAL_BLOCK_ORE);
+            event.accept(ModBlocks.EBONY_LEAVES);
+            event.accept(ModBlocks.EBONY_LOG);
+            event.accept(ModBlocks.EBONY_WOOD);
+            event.accept(ModBlocks.EBONY_PLANKS);
+            event.accept(ModBlocks.STRIPPED_EBONY_LOG);
+            event.accept(ModBlocks.STRIPPED_EBONY_WOOD);
+            event.accept(ModBlocks.EBONY_SAPLING);
         }
         if (event.getTab()== ModCreativeModeTabs.CLUTCH_TAB){
             event.accept(ModItems.BLAKC_OPAL);
@@ -76,7 +83,15 @@ public class ElmosMod
             event.accept(ModBlocks.NETHERRACK_BLACK_OPAL_BLOCK_ORE);
             event.accept(ModBlocks.ENDSTONE_BLACK_OPAL_BLOCK_ORE);
 
+            event.accept(ModBlocks.EBONY_LEAVES);
+            event.accept(ModBlocks.EBONY_LOG);
+            event.accept(ModBlocks.EBONY_WOOD);
+            event.accept(ModBlocks.EBONY_PLANKS);
+            event.accept(ModBlocks.STRIPPED_EBONY_LOG);
+            event.accept(ModBlocks.STRIPPED_EBONY_WOOD);
+            event.accept(ModBlocks.EBONY_SAPLING);
         }
+
     }
 
 

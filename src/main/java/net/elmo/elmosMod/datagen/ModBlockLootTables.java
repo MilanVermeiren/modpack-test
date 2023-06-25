@@ -6,6 +6,7 @@ import net.elmo.ElmosMod.item.ModItems;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.Set;
@@ -28,6 +29,16 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 (block) -> createOreDrop(ModBlocks.NETHERRACK_BLACK_OPAL_BLOCK_ORE.get(), ModItems.RAW_BLAKC_OPAL.get()));
         add(ModBlocks.ENDSTONE_BLACK_OPAL_BLOCK_ORE.get(),
                 (block) -> createOreDrop(ModBlocks.ENDSTONE_BLACK_OPAL_BLOCK_ORE.get(), ModItems.RAW_BLAKC_OPAL.get()));
+
+        this.dropSelf(ModBlocks.EBONY_LOG.get());
+        this.dropSelf(ModBlocks.EBONY_WOOD.get());
+        this.dropSelf(ModBlocks.EBONY_PLANKS.get());
+        this.dropSelf(ModBlocks.STRIPPED_EBONY_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_EBONY_LOG.get());
+        this.dropSelf(ModBlocks.EBONY_SAPLING.get());
+
+        this.add(ModBlocks.EBONY_LEAVES.get(),(block) ->
+                createLeavesDrops(block,ModBlocks.EBONY_SAPLING.get(),NORMAL_LEAVES_SAPLING_CHANCES));
     }
 
     @Override
